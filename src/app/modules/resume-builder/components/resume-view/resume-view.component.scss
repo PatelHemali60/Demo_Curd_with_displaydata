@@ -1,0 +1,54 @@
+:host{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+}
+.warpper{
+  margin: 20px;
+}
+.main {
+    border-top: 5px rgb(99, 96, 96) solid;
+    border-bottom: 5px rgb(99, 96, 96) solid;
+    width: 900px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    background-color: #eaecee;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div .continer {
+    margin: 50px;
+}
+
+table .td-1 {
+    font-style: italic;
+    width: 20%;
+}
+
+td>h3 {
+    padding-bottom: 10px;
+}
+
+.btn {
+    padding: 5px;
+}
+
+
+.parentBorder {
+    border-top: #a1a0a0 2pt solid;
+    padding-top: 20px ;
+    padding-bottom: 20px;
+}
+
+.parentBorder2 {
+    border-top: #a1a0a0 2px solid;
+    padding-top: 20px;
+}
+
+#tab-2 tr.style2 td {
+    border-top: #9b9a9a 2pt solid;
+}

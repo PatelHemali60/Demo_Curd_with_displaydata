@@ -1,0 +1,105 @@
+{
+  "employeedb": [
+    {
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": 2334667899,
+      "Email": "hemali90@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "dob": "2022-02-15",
+      "departList": "3",
+      "id": 1
+    },
+    {
+      "firstName": "heena",
+      "lastName": "shah",
+      "phoneNumber": 2334667899,
+      "Email": "heena23@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "dob": "2022-02-15",
+      "departList": "1",
+      "id": 2
+    },
+    {
+      "firstName": "piku",
+      "lastName": "patel",
+      "phoneNumber": 2334667899,
+      "Email": "piku@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "dob": "2022-02-15",
+      "departList": "2",
+      "id": 3
+    },
+    {
+      "firstName": "hina",
+      "lastName": "patel",
+      "phoneNumber": 2334667899,
+      "Email": "hina11@gmail.com",
+      "age": "24",
+      "gender": "Female",
+      "dob": "2022-02-15",
+      "departList": "3",
+      "id": 4
+    },
+    {
+      "firstName": "Priynka",
+      "lastName": "patel",
+      "phoneNumber": 2334667899,
+      "Email": "Priynka@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "dob": "2022-02-15",
+      "departList": "3",
+      "id": 5
+    }
+  ],
+  "department": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "Backend"
+    },
+    {
+      "id": 3,
+      "name": "Mobile"
+    },
+    {
+      "id": 4,
+      "name": "Database"
+    }
+  ],
+  "ResumeBuilder": [
+    {
+      "username": "hemali.patel",
+      "email": "patelhemu60@gmail.com",
+      "contactNo": "1234556634",
+      "postname": "hemali.patel",
+      "skills": [
+        {
+          "technicalSkills": "sfggde"
+        }
+      ],
+      "experiences": [
+        {
+          "companyName": "bgrnhgn",
+          "years": "23",
+          "post": "wrgreg"
+        }
+      ],
+      "education": [
+        {
+          "schoolName": "ewfrgre",
+          "major": "ergtg",
+          "cgpa": "sfersgesrg"
+        }
+      ],
+      "id": 1
+    }
+  ]
+}
