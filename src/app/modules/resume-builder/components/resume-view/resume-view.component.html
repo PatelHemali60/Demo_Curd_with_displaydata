@@ -1,156 +1,137 @@
-<section class="warpper">
+<section class="main-resume">
 	<title>Mockup Task</title>
 	<!--main div-->
-	<div class="main">
-		<div class="continer">
-			<table id="tab-1" class="parent" style="width: 100%;">
 
-				<!-- 1st row-->
-				<tr>
-					<td colspan="2" style="text-align: left; ">
-						<h1> {{ resumeForm.username }} </h1>
-						<p> {{ resumeForm.postname }}</p>
-					</td>
-					<td colspan="2">
-						<table id="tab-3" style="width: 100%;margin-left:200px;">
-							<tr>
-								<td><input type="button" value="Download PDF" class="btn"></td>
-							</tr>
+	<div class="continer">
+		<table id="tab-1" class="parent" style="width: 100%;">
 
-							<tr>
-								<td style="color: red;"> {{resumeForm.email}}</td>
-							</tr>
+			<!-- Name -->
+			<tr>
+				<td colspan="2" style="text-align: left; ">
+					<h1> {{ resumeForm.username }} </h1>
+					<p> {{ resumeForm.postname }}</p>
+				</td>
 
-							<tr>
-								<td style="padding-top: 0px;"> {{resumeForm.contactNo}}</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-				<!-- end of the 1st row-->
+				<td colspan="2">
+					<table id="tab-3" style="width: 100%;margin-left:200px;">
+						<tr>
+							<td><input type="button" value="Download PDF" class="btn"></td>
+						</tr>
+						<!-- Email -->
+						<tr>
+							<td style="color: red;"> {{resumeForm.email}}</td>
+						</tr>
+						<!-- Phone No -->
+						<tr>
+							<td style="padding-top: 0px;"> {{resumeForm.contactNo}}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- end of the 1st row-->
 
-				<!-- 2nd row-->
-				<tr id="tr-2">
-					<td class="td-1 parentBorder">profile</td>
-					<td colspan="3" class="parentBorder"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Provident doloremque dignissimos quaerat corporis beatae cum obcaecati aspernatur nisi at animi
-						suscipit
-						libero voluptatem accusantium dolorum necessitatibus perspiciatis distinctio,
-						soluta veniam!
-					</td>
-				</tr>
-				<!--end of the 2nd row-->
+			<!-- Start Profile -->
+			<tr id="tr-2">
+				<td class="td-1 parentBorder">profile</td>
+				<td colspan="3" class="parentBorder"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Provident doloremque dignissimos quaerat corporis beatae cum obcaecati aspernatur nisi at animi
+					suscipit
+					libero voluptatem accusantium dolorum necessitatibus perspiciatis distinctio,
+					soluta veniam!
+				</td>
+			</tr>
+			<!--end of the 2nd row-->
 
-				<!-- 3rd row-->
-				<tr id="tr-3">
-					<td class="td-1 parentBorder">Skill</td>
-					<td style="width:26.6%" class="parentBorder">
-						<h3>Web Design</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
-					</td>
-					<td style="width:26.6%" class="parentBorder">
-						<h3>Interface Design</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
-					</td>
-					<td style="width:26.6%" class="parentBorder">
-						<h3>Project Direction</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
-					</td>
-				</tr>
-				<!--end of the 3rd row-->
-				<!-- End Skills -->
-				<!-- Start Technical -->
-				<!-- 4th row-->
-				<tr id="tr-4">
-					<td class="td-1 parentBorder">Technical</td>
-					<td colspan="3" class="parentBorder">
-						<table id="tab-2" style="width: 100%;">
-							<tr *ngFor="let skill of resumeForm.skills">
-								<td style="width:33.3%">{{ skill.technicalSkills }}</td>
+			<!-- Start Skills -->
+			<tr id="tr-3">
+				<td class="td-1 parentBorder">Skill</td>
+				<td style="width:26.6%" class="parentBorder">
+					<h3>Web Design</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
+				</td>
+				<td style="width:26.6%" class="parentBorder">
+					<h3>Interface Design</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
+				</td>
+				<td style="width:26.6%" class="parentBorder">
+					<h3>Project Direction</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, aspernatur?</p>
+				</td>
+			</tr>
+			<!--end of the 3rd row-->
+			<!-- End Skills -->
 
-							</tr>
 
-							<tr class="style2">
-								<td>CSS</td>
-								<td>PHP</td>
-								<td>Windows XP/Vista</td>
-							</tr>
+			<!-- Start Technical -->
 
-							<tr class="style2">
-								<td>JavaScript</td>
-								<td>PHP</td>
-								<td>Windows XP/Vista</td>
-							</tr>
+			<tr id="tr-4">
+				<td class="td-1 parentBorder">Technical</td>
+				<td colspan="3" class="parentBorder">
+					<table id="tab-2" style="width: 100%;">
+						<tr class="tech-skill" *ngFor="let skill of resumeForm.skills">
+							<td style="width:33.3%">{{ skill.technicalSkills }}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!--end of the 4th row-->
 
-						</table>
-					</td>
-				</tr>
-				<!--end of the 4th row-->
-
-				<!-- 5th row-->
-				<tr id="tr-5" class="style2">
-					<td class="td-1 parentBorder" style="vertical-align: top">Experience</td>
-					<td colspan="3" class="parentBorder">
-						<table id="tab-3" style="width: 100%;">
-							<tr *ngFor=" let exp of resumeForm.experiences">
-								<td><b>{{exp.companyName}}</b></td>
-								<td style="float:right;">{{exp.years}}</td>
-								<td>{{exp.post}}</td>
-							</tr>
-							<tr>
-								<!-- <td>{{exp.post}}</td> -->
-							</tr>
-							<td style="padding-top: 10px; padding-bottom:20px">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque
-								dignissimos
-								quaerat corporis beatae cum obcaecati.
-							</td>
+			<!-- Start Experience -->
+			<tr id="tr-5" class="style2">
+				<td class="td-1 parentBorder" style="vertical-align: top">Experience</td>
+				<td colspan="3" class="parentBorder">
+					<table id="tab-3" style="width: 100%;">
+						<tr  class="experiance" *ngFor=" let exp of resumeForm.experiences">
+							<td style="padding: 0">
 							
+								<h3>{{exp.companyName}}</h3> <!-- CHNAGES HERE-->
+								<p>{{exp.post}}</p>
+								<p>
+								  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								  Accusamus ipsum a mollitia, fugit incidunt culpa?
+								</p>
+							  </td>
+							
+							  <td style="width: 100px">{{exp.years}}</td>
+						</tr>
+						<tr>
+							<!-- <td>{{exp.post}}</td> -->
+						</tr>
+						<td style="padding-top: 10px; padding-bottom:20px">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque
+							dignissimos
+							quaerat corporis beatae cum obcaecati.
+						</td>
 
-							<!-- <tr>
-								<td class="parentBorder2" style="padding-top:20px;"><b>Apple Inc.</b></td>
-								<td class="parentBorder2" style="float:right; margin-right:12px;">2005-2007</td>
-							</tr>
-							<tr>
-								<td>Senior Inyterface Designer</td>
-							</tr>
-							<td style="padding-top: 10px;">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque
-								dignissimos
-								quaerat corporis beatae cum obcaecati.
-							</td>
-							<tr> -->
+						
+					</table>
+				</td>
+			</tr>
+			<!--end of Experience-->
 
-							<!-- </tr> -->
-						</table>
-					</td>
-				</tr>
-				<!--end of the 5th row-->
+			<!-- Start Education -->
+			<tr id="tr-6">
+				<td class="td-1 parentBorder">Education</td>
+				<td colspan="3" class="parentBorder" *ngFor="let education of resumeForm.education">
+					<b>{{ education.schoolName }}</b>
+					<p> {{ education.major}} - <b> {{education.cgpa}}</b></p>
+				</td>
+			</tr>
+			<!--end of the 6th row-->
 
-				<!-- 6th row-->
-				<tr id="tr-6">
-					<td class="td-1 parentBorder">Education</td>
-					<td colspan="3" class="parentBorder" *ngFor="let education of resumeForm.education">
-						<b>{{ education.schoolName }}</b>
-						<p> {{ education.major}} - <b> {{education.cgpa}}</b></p>
-					</td>
-				</tr>
-				<!--end of the 6th row-->
+			<!-- 7th row-->
+			<tr id="tr-6">
+				<td class="td-1 parentBorder2"></td>
+				<td colspan="3" class="parentBorder2">
+					<p style="margin-left:20px">
+						{{resumeForm.username}} <span style="color: red;"> {{resumeForm.email}}
+						</span>{{resumeForm.contactNo }}
+					</p>
+				</td>
+			</tr>
+			<!--end of the 7th row-->
+		</table>
 
-				<!-- 7th row-->
-				<tr id="tr-6">
-					<td class="td-1 parentBorder2"></td>
-					<td colspan="3" class="parentBorder2">
-						<p style="margin-left:20px">
-							{{resumeForm.username}} <span style="color: red;"> {{resumeForm.email}}
-							</span>{{resumeForm.contactNo}}
-						</p>
-					</td>
-				</tr>
-				<!--end of the 7th row-->
-			</table>
-
-		</div>
 	</div>
 	<!--end of the main div-->
 </section>

@@ -54,6 +54,17 @@
       "dob": "2022-02-15",
       "departList": "3",
       "id": 5
+    },
+    {
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": 67562342323,
+      "Email": "hemali90@gmail.com",
+      "Age": "23",
+      "gender": "Female",
+      "dob": "2022-02-21",
+      "departList": "2",
+      "id": 6
     }
   ],
   "department": [
@@ -76,27 +87,36 @@
   ],
   "ResumeBuilder": [
     {
-      "username": "hemali.patel",
-      "email": "patelhemu60@gmail.com",
-      "contactNo": "1234556634",
-      "postname": "hemali.patel",
+      "username": "piku",
+      "email": "patelpiku60@gmail.com",
+      "contactNo": "8975346222",
+      "postname": "devloper",
       "skills": [
         {
-          "technicalSkills": "sfggde"
+          "technicalSkills": "html"
+        },
+        {
+          "technicalSkills": "css"
+        },
+        {
+          "technicalSkills": "db"
+        },
+        {
+          "technicalSkills": "data"
         }
       ],
       "experiences": [
         {
-          "companyName": "bgrnhgn",
-          "years": "23",
-          "post": "wrgreg"
+          "companyName": "semicolon",
+          "years": "2",
+          "post": "developer"
         }
       ],
       "education": [
         {
-          "schoolName": "ewfrgre",
-          "major": "ergtg",
-          "cgpa": "sfersgesrg"
+          "schoolName": "gujrat technological",
+          "major": "computer science",
+          "cgpa": "7"
         }
       ],
       "id": 1

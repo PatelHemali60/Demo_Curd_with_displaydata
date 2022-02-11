@@ -22,6 +22,9 @@ export class ResumeFormComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.experiences.value);
+    
+
   }
 
   //building form group for form with form array
@@ -46,6 +49,8 @@ export class ResumeFormComponent implements OnInit {
   }
 
   get user() { return this.resumeForm.controls; }
+
+
 
   get skills(): FormArray {
     return this.resumeForm.controls['skills'] as FormArray;

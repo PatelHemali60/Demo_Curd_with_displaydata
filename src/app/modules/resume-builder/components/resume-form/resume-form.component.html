@@ -11,6 +11,7 @@
                     Required</small>
                 <small class="text-danger" *ngIf="user['username']?.errors?.['minlength']">* minimum length shouldbe 3
                     character</small>
+
             </div>
             <!-- Email -->
             <div class="form-group mt-2">
@@ -18,22 +19,20 @@
                 <input class="form-control" type="email" id="email" placeholder="Enter your email"
                     formControlName="email" />
                 <small class="text-danger" *ngIf="!user['email']?.valid && user['email']?.touched">* Please Enter a
-                    valid
-                    Email</small>
+                    valid Email</small>
             </div>
-            <!-- Phone No -->
+            <!-- Phone Number -->
             <div class="form-group mt-2">
                 <label for="contactNo">Phone No :</label>
                 <input class="form-control" type="text" id="contactNo" placeholder="Enter your phone number"
                     formControlName="contactNo" maxlength="10" />
                 <small class="text-danger" *ngIf="!user['contactNo']?.valid && user['contactNo']?.touched">* This Field
-                    is
-                    Required</small>
+                    is Required</small>
                 <small class="text-danger" *ngIf="user['contactNo']?.errors?.['minlength']">* minimum length should be
                     10
                     character</small>
             </div>
-            <!-- Post -->
+            <!-- Post name -->
             <div class="form-group mt-1">
                 <label for="postname">Post :</label>
                 <input class="form-control" type="text" id="username" placeholder="Enter your Name"
@@ -42,55 +41,96 @@
                     Required</small>
             </div>
             <!-- Technical Skills -->
-            <div>
-                Technical Skills :
+            <fieldset>
+                <legend> Technical Skills :</legend>
                 <div formArrayName="skills" *ngFor="let skill of skills.controls, let i = index">
-                    <div class="skillfield d-flex mt-2" [formGroupName]="i">
+                    <div class="skillfield d-flex margin mt-2" [formGroupName]="i">
                         <input class="form-control" type="text" formControlName="technicalSkills" />
-                        <small class="text-danger" *ngIf="skills.controls[i]?.touched">*</small>
-                        <button type="button" class="btn btn-danger ml-1" (click)="deleteSkills(i)"> delete</button>
+                        <small class="text-danger"
+                            *ngIf="skills.controls[i]?.get ('technicalSkills')?.touched && !skills.controls[i]?.get('technicalSkills')?.valid">*invalid
+                            data</small>
+                        <button type="button" class="btn btn-outline-danger ml-1" (click)="deleteSkills(i)">
+                            delete</button>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-2" (click)="addSkill()">+</button>
-            </div>
+                <button type="button" class="btn btn-outline-primary mt-2" (click)="addSkill()">+</button>
+            </fieldset>
+
             <!-- Experiences -->
-            <div>
-                Experirnces :
+            <fieldset>
+                <legend>Experirnces :</legend>
                 <div formArrayName="experiences" *ngFor="let experience of experiences.controls, let i = index">
-                    <div class="expfield d-flex col mt-2" [formGroupName]=i>
+                    <div class=" d-flex  expfield col mt-2" [formGroupName]=i>
                         <label for="companyName">Company Name:</label>
                         <input class="form-control" type="text" formControlName="companyName" />
+
+                        <!-- error for company -->
+                        <small class="text-danger"
+                            *ngIf="experiences.controls[i]?.get('companyName')?.touched && !experiences.controls[i]?.get('companyName')?.valid">*invalid
+                            experiance</small>
+
                         <label for="years">Years:</label>
                         <input class="form-control" type="text" formControlName="years" />
+
+                        <!-- error for year -->
+                        <small class="text-danger"
+                            *ngIf="experiences.controls[i]?.get('years')?.touched && !experiences.controls[i]?.get('years')?.valid">*invalid
+                            year</small>
+
+
                         <label for="post">Post:</label>
-                        <div class="d-flex">
+                        <div class="d-flex  mt-2">
                             <input class="form-control" type="text" formControlName="post" />
-                            <button type="button" class="btn btn-danger ml-1" (click)="deleteExperince(i)"> delete
+
+                            <!-- error for post -->
+                            <small class="text-danger"
+                                *ngIf="experiences.controls[i]?.get ('post')?.touched && !experiences.controls[i]?.get ('post')?.valid">*invalid
+                                post</small>
+
+                            <button type="button" class="btn btn-outline-danger ml-1" (click)="deleteExperince(i)">
+                                delete
                             </button>
                         </div>
 
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-2" (click)="addExperince()"> + </button>
-            </div>
+                <button type="button" class="btn btn-outline-primary mt-2" (click)="addExperince()"> Add +</button>
+            </fieldset>
             <!-- Eductions -->
             <div>
                 Eduction :
-                <div formArrayName="education" *ngFor="let experience of education.controls, let i = index">
+                <div formArrayName="education" *ngFor="let edu of education.controls, let i = index">
                     <div class="edufield d-flex col mt-2" [formGroupName]=i>
                         <label for="schoolName">collage Name:</label>
                         <input class="form-control" type="text" formControlName="schoolName" />
+
+                        <!-- error schoolname -->
+                        <small class="text-danger"
+                            *ngIf="education.controls[i]?.get('schoolName')?.touched && !education.controls[i]?.get('schoolName')?.valid">*invalid
+                            data</small>
+
                         <label for="major">field :</label>
                         <input class="form-control" type="text" formControlName="major" />
+                        <small class="text-danger"
+                            *ngIf="education.controls[i]?.get('major')?.touched && !education.controls[i]?.get('major')?.valid">*invalid
+                            major</small>
+
+
                         <label for="cgpa">CGPA :</label>
-                        <div class="d-flex">
+                        <div class="d-flex col mt-2">
                             <input class="form-control" type="text" formControlName="cgpa" />
-                            <button type="button" class="btn btn-danger ml-1" (click)="deleteEducation(i)"> delete
+
+                            <small class="text-danger"
+                                *ngIf="education.controls[i]?.get('cgpa')?.touched && !education.controls[i]?.get('cgpa')?.valid">*invalid
+                                cgpa</small>
+
+                            <button type="button" class="btn btn-outline-danger ml-1" (click)="deleteEducation(i)">
+                                delete
                             </button>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary mt-2" (click)="addEducation()">+</button>
+                <button type="button" class="btn btn-outline-primary mt-2" (click)="addEducation()"> Add +</button>
             </div>
             <!-- submit -->
             <button type="submit" class="btn btn-primary mt-3" [disabled]="resumeForm.invalid">Submit</button>

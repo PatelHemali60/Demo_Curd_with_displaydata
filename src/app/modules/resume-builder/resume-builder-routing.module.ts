@@ -8,6 +8,7 @@ const routes: Routes = [
 
       { path: '' ,
       children:[
+        { path:'' , redirectTo:'form', pathMatch:'full'},
         
         {path:'form' ,component: ResumeFormComponent},
         {path:'view' ,component: ResumeViewComponent},

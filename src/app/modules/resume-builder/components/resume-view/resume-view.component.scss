@@ -1,28 +1,24 @@
-:host{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin: auto;
+
+.main-resume{
+    // margin: 0;
+    // padding: 0;
+    // box-sizing: border-box;
+     //margin: auto;
+    width: 100%;
+    padding: 50px;
+
 }
-.warpper{
-  margin: 20px;
-}
-.main {
+
+.continer {
     border-top: 5px rgb(99, 96, 96) solid;
     border-bottom: 5px rgb(99, 96, 96) solid;
     width: 900px;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+     padding: 40px;
     justify-content: center;
     background-color: #eaecee;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    //margin: 50px;
 }
 
-div .continer {
-    margin: 50px;
-}
 
 table .td-1 {
     font-style: italic;
@@ -51,4 +47,7 @@ td>h3 {
 
 #tab-2 tr.style2 td {
     border-top: #9b9a9a 2pt solid;
+}
+table tr .tech-skill{
+    display: flex;
 }

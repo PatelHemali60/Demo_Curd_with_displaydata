@@ -1,9 +1,9 @@
-:host{
+.side-nav{
     display: flex;
     flex-direction: column;
-    width: 300px;
     background-color: #99caf5 ;
-    text-align: right;
+    align-items: center;
+    height: 100%; 
 }
 
 h1{
@@ -14,25 +14,25 @@ h1{
 
 ul{
     list-style: none;
-    padding: 0px 0;
+    padding: 20px ;
     
     li{
-        margin: 50px 0;
-        padding: 20px;
-        border-radius: 20px;
-        background-color: rgb(245, 233, 248);
+        margin: 20px 0;
+        padding: 15px 30px;
+        border-radius: 10px;
+        background-color: rgb(240, 219, 193);
     
 
         a{
             text-decoration: none;
             color: rgb(82, 79, 79);
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 200;
             
 
             &.active:hover{
-                color: #f5257b;
-                background: rgb(241, 240, 179);
+                // color: #f5257b;
+                background: rgb(129, 219, 241);
             }
         }
     }
