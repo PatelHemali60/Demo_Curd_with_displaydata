@@ -1,0 +1,102 @@
+:host{
+    margin: 0;
+   
+    display: flex;
+    flex-grow: 1;
+   // padding: 100px;
+    background-color: #eaeef0;
+    font-size: 20px;
+    padding: 50px;
+    max-width: 100%;
+    box-sizing: border-box;
+   
+}
+.continer{
+       
+        display: flex;
+        flex-direction: column;
+
+        .top{
+            display: flex;
+             justify-content: space-between;
+             margin: 20px;
+             flex-direction: row;
+            }
+        .align-item{
+            display: flex;
+           flex-direction: row;
+         
+        
+          }
+          .openform{
+              display:  flex;
+              flex-wrap: nowrap;
+              flex-direction: row;
+            
+          }
+        
+            //width: 100%;
+          
+            #myInput {
+                background-position: 10px 12px;
+                background-repeat: no-repeat;
+                // width: 50px;
+                font-size: 15px;
+                // padding: 12px 20px 12px 40px;
+                padding: 10px 10px;
+                border: 1px solid #ddd;
+        
+             }
+             .list{
+                 display: flex;
+                 flex-direction:row;
+                 
+             }
+             .space{
+                 display: flex;
+                 flex-wrap: wrap;
+                 flex-direction: row;
+                 
+             }
+             span{
+                 color: red;
+             }
+            
+        }        
+    
+       
+        button{
+            border: none;
+            background-color:#507def;
+            color: black;
+            margin-left: 100px;
+            padding: 5px 10px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+    
+    .bx{
+        padding: 0 5px;
+        color: #2e2f36;
+        transform: scale(1.2,1.2);
+    }
+
+    table,td,th{
+        border-collapse: collapse;
+        padding: 5px 20px;
+        border: 1px solid #0708411c;
+        text-align: center;
+        color: rgb(37, 12, 12);
+        cursor: pointer;
+    }
+
+    th{
+        background-color: #aeb3b8;
+        color: black;
+    }
+
+    table{
+        width: 900px;
+        margin: 0 auto;
+    }

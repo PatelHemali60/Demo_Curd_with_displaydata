@@ -9,14 +9,16 @@ import { ResumeBuilderModule } from './modules/resume-builder/resume-builder.mod
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,  
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     ResumeBuilderModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

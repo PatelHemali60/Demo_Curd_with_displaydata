@@ -1,0 +1,126 @@
+<div class="continer">
+
+    <!-- nav items-->
+    <div class="top">
+
+        <!-- <input type="text" id="myInput" placeholder="Search..." >[(ngModel)]="search"> -->
+        <div class="align-item">
+            <p> User </p>
+            <div class="list">
+
+                <label for="department">client:</label>
+                <div>
+                    <select id="department" name="department" formControlName="departList">
+                        <option *ngFor="let d of departList" [value]="d.id">
+                            {{ d.name }}
+                        </option>
+                    </select>
+                </div>
+
+                <input type="text" id="myInput" placeholder="Search..." class="margin"  [(ngModel)]="userSearch">
+
+            </div>
+
+        </div>
+        <!--open form-->
+        <div class="openform">
+            <!-- add form on button click-->
+            <button class="btn btn-primary margin" (click)="showForm()">+Add user</button>
+
+            <!-- conditon for display form-->
+            <div *ngIf="showMe" class="div-form">
+
+                <!-- <label for=""> form works!!! </label> -->
+
+                <!-- form starts here-->
+                <form [formGroup]="useradd">
+                    <h2> Registration Form </h2>
+                    <div class="space">
+                        <label for="fname"> FirstName </label>
+                        <p>
+                            <input type="text" name="fname" id="fname" formControlName="firstName">
+                            <span *ngIf="!user['firstName']?.valid && user['firstName']?.touched"> *</span>
+                        </p>
+                    </div>
+
+                    <div class="space">
+                        <label for="lname"> Last Name </label>
+                        <p>
+                            <input type="text" name="lname" id="lname" formControlName="lastName">
+                            <span *ngIf="!user['lastName']?.valid && user['lastName']?.touched"> *</span>
+                        </p>
+                    </div>
+
+                    <div class="space">
+                        <label for="mail"> Email </label>
+                        <p>
+                            <input type="text" name="mail" id="mail" formControlName="Email">
+                            <span *ngIf="!user['Email']?.valid && user['Email']?.touched"> * </span>
+                        </p>
+                    </div>
+
+                    <div class="space">
+                        <label for="phone"> Phone Number </label>
+                        <p>
+                            <input type="tel" name="phone" id="phone" formControlName="phoneNumber">
+                            <span *ngIf="!user['phoneNumber']?.valid && user['phoneNumber']?.touched">** </span>
+                        </p>
+                    </div>
+
+                    <div class="space">
+                        <!-- department data-->
+                        <label for="department"> client:</label>
+                        <div>
+                            <select id="department" name="department" formControlName="departList">
+                                <option *ngFor="let d of departList" [value]="d.id">
+                                    {{ d.name }}
+                                </option>
+                            </select>
+                            <span *ngIf="!user['departList']?.valid && user['departList']?.touched"> *</span>
+                        </div>
+                    </div>
+                    <div class="space">
+                        <button (click)="onsubmit()" [disabled]="!useradd.valid"> Submit </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of the top-->
+
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th> No </th>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> Phone Number </th>
+                    <th> Email </th>
+                    <th> Client </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- <tr *ngFor="let list of listdata | searchText:search"> -->
+                    <tr *ngFor="let list of listdata | userSearch:userSearch">
+                        <td> {{list.id}</td>
+                        <td> {{list.firstName}} </td>
+                        <td> {{list.lastName}} </td>
+                        <td> {{list.phoneNumber}} </td>
+                        <td> {{list.Email}} </td>
+                        <td> {{list.departList | idFilter:departfilter}} </td>
+                        <td><i routerLink="../edit/{{list.id}}" class='bx bxs-edit-alt'></i>
+                            <i (click)="deletedata(list.id)" class='bx bxs-trash'></i>
+                        </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

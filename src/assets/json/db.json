@@ -67,24 +67,6 @@
       "id": 6
     }
   ],
-  "department": [
-    {
-      "id": 1,
-      "name": "Frontend"
-    },
-    {
-      "id": 2,
-      "name": "Backend"
-    },
-    {
-      "id": 3,
-      "name": "Mobile"
-    },
-    {
-      "id": 4,
-      "name": "Database"
-    }
-  ],
   "ResumeBuilder": [
     {
       "username": "piku",
@@ -120,6 +102,50 @@
         }
       ],
       "id": 1
+    }
+  ],
+  "departList": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "Backend"
+    },
+    {
+      "id": 3,
+      "name": "Mobile"
+    },
+    {
+      "id": 4,
+      "name": "Database"
+    }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": 67562342323,
+      "Email": "hemali90@gmail.com",
+      "departList": "3"
+    },
+    {
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": "325475858",
+      "Email": "hemali90@gmail.com",
+      "departList": "2",
+      "id": 2
+    },
+    {
+      "firstName": "piku",
+      "lastName": "patel",
+      "phoneNumber": "3446454664",
+      "Email": "pikupatel15@gmail.com",
+      "departList": "2",
+      "id": 3
     }
   ]
 }
