@@ -69,36 +69,33 @@
   ],
   "ResumeBuilder": [
     {
-      "username": "piku",
-      "email": "patelpiku60@gmail.com",
-      "contactNo": "8975346222",
-      "postname": "devloper",
+      "username": "jay",
+      "email": "jaypatel@gmail.com",
+      "contactNo": "7873726767",
+      "postname": "frontend dveloper",
       "skills": [
+        {
+          "technicalSkills": "js"
+        },
         {
           "technicalSkills": "html"
         },
         {
-          "technicalSkills": "css"
-        },
-        {
-          "technicalSkills": "db"
-        },
-        {
-          "technicalSkills": "data"
+          "technicalSkills": "angular"
         }
       ],
       "experiences": [
         {
-          "companyName": "semicolon",
-          "years": "2",
-          "post": "developer"
+          "companyName": "1rivet",
+          "years": "5",
+          "post": "develpoer"
         }
       ],
       "education": [
         {
-          "schoolName": "gujrat technological",
-          "major": "computer science",
-          "cgpa": "7"
+          "schoolName": "gujrat technological univercity",
+          "major": "computer",
+          "cgpa": "6.7"
         }
       ],
       "id": 1
@@ -125,27 +122,27 @@
   "User": [
     {
       "id": 1,
-      "firstName": "hemali",
+      "firstName": "priyank",
       "lastName": "patel",
       "phoneNumber": 67562342323,
-      "Email": "hemali90@gmail.com",
+      "Email": "priyank@gmail.com",
+      "departList": "4"
+    },
+    {
+      "id": 1,
+      "firstName": "piku",
+      "lastName": "patel",
+      "phoneNumber": 67562342323,
+      "Email": "piku@gmail.com",
       "departList": "3"
     },
     {
       "firstName": "hemali",
       "lastName": "patel",
-      "phoneNumber": "325475858",
+      "phoneNumber": "654",
       "Email": "hemali90@gmail.com",
       "departList": "2",
       "id": 2
-    },
-    {
-      "firstName": "piku",
-      "lastName": "patel",
-      "phoneNumber": "3446454664",
-      "Email": "pikupatel15@gmail.com",
-      "departList": "2",
-      "id": 3
     }
   ]
 }

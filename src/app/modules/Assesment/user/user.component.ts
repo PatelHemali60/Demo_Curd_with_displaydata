@@ -38,7 +38,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
 
     //get department data display
-    this.getdepart()
+    this.getdepart();
 
     //functionf fro display data
     this.display();
@@ -88,6 +88,16 @@ export class UserComponent implements OnInit {
     } else {
       this.savedata();
     }
+  }
+
+  //edit 
+  editData(id:number){
+    console.log("hrllooo");
+    this.showMe =!this.showMe
+    this.service.getbyid(id).subscribe((editData)=>{
+      this.useradd.patchValue(editData);
+    })
+
   }
 
   //get method for get form value
