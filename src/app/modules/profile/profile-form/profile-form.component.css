@@ -1,0 +1,14 @@
+.form-wrapper{
+    margin-left:400px;
+    width: 40%;
+    background-color: rgb(242, 248, 250);
+}
+.form-container {
+   
+    box-shadow: rgba(24, 7, 7, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(44, 43, 43, 0.09) 0px -3px 5px;
+    
+}
+label{
+    font-size: 15px;
+    color:rgb(4, 4, 32);
+}

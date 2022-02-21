@@ -2,32 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ResumeBuilderRoutingModule } from './resume-builder-routing.module';
-
-import { ResumeFormComponent } from './components/resume-form/resume-form.component';
-import { ResumeViewComponent } from './components/resume-view/resume-view.component';
-import { FormsModule} from '@angular/forms';
+import { UserFormComponent } from './user-form/user-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResumeViewComponent } from './resume-view/resume-view.component';
+import { ResumeService } from './service/resume.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ResumeService } from './services/resume.service';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
   declarations: [
-  
-    ResumeFormComponent,
-    ResumeViewComponent,
+    UserFormComponent,
+    ResumeViewComponent
   ],
   imports: [
     CommonModule,
     ResumeBuilderRoutingModule,
     ReactiveFormsModule,
-    FormsModule,
     HttpClientModule,
-    
+    NgxMaskModule.forRoot()
   ],
-  providers: [
+  providers:[
     ResumeService
   ]
- 
 })
 export class ResumeBuilderModule { }

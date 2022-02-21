@@ -1,0 +1,159 @@
+{
+  "gender": [
+    {
+      "id": 1,
+      "name": "male"
+    },
+    {
+      "id": 2,
+      "name": "female"
+    },
+    {
+      "id": 3,
+      "name": "other"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "QA"
+    },
+    {
+      "id": 3,
+      "name": "Database"
+    },
+    {
+      "id": 4,
+      "name": ".Net"
+    },
+    {
+      "id": 5,
+      "name": "UX"
+    },
+    {
+      "id": 6,
+      "name": "Mobile"
+    }
+  ],
+  "users": [
+    {
+      "firstname": "priyanshi",
+      "lastname": "Patel",
+      "email": "priyanshi@mail.com",
+      "phoneNo": "8945232345",
+      "gender": "female",
+      "doj": "2022-01-03",
+      "department": 1,
+      "id": 2
+    },
+    {
+      "firstname": "abhik",
+      "lastname": "Patel",
+      "email": "abhik.patel@gamil.com",
+      "phoneNo": "7855545455",
+      "gender": "male",
+      "doj": "2022-01-03",
+      "department": 1,
+      "id": 3
+    },
+    {
+      "firstname": "manisha",
+      "lastname": "rajpurohit",
+      "email": "manisha.raj@email.com",
+      "phoneNo": "7855545455",
+      "gender": "female",
+      "doj": "2022-01-03",
+      "department": 6,
+      "id": 5
+    },
+    {
+      "firstname": "Ankit",
+      "lastname": "Patel",
+      "email": "ankitpatelak2017@gmail.com",
+      "phoneNo": "8945232345",
+      "gender": "male",
+      "doj": "2022-01-03",
+      "department": "3",
+      "id": 6
+    }
+  ],
+  "resume": [
+    {
+      "username": "Ankit",
+      "email": "ankitpatelak2017@gmail.com",
+      "contactNo": "8347892046",
+      "postname": "Ankit",
+      "skills": [
+        {
+          "technicalSkills": "html"
+        }
+      ],
+      "experiences": [
+        {
+          "companyName": "fgfg",
+          "years": "fdfd",
+          "post": "dfdf"
+        }
+      ],
+      "educations": [
+        {
+          "schoolName": "dfdf",
+          "major": "dfdf",
+          "cgpa": "dfdf"
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "employees": [
+    {
+      "name": "Ankit Patel",
+      "email": "ankitpatelak2017@gmail.com",
+      "mobile": "8347892046",
+      "city": "Vapi",
+      "gender": 1,
+      "department": "3",
+      "hireDate": "2022-01-03",
+      "isPermanent": false,
+      "id": 1
+    },
+   
+    {
+      "name": "piku",
+      "email": "piku@mail.com",
+      "mobile": "8347892046",
+      "city": "Vapi",
+      "gender": 1,
+      "department": 1,
+      "hireDate": "2022-02-03",
+      "isPermanent": true,
+      "id": 4
+    },
+    {
+      "name": "hemali Patel",
+      "email": "aman@mail",
+      "mobile": "8347892046",
+      "city": "gandevi",
+      "gender": 1,
+      "department": 1,
+      "hireDate": "2022-02-03",
+      "isPermanent": false,
+      "id": 5
+    },
+    {
+      "name": "nehu",
+      "email": "nehu21740@gmail.com",
+      "mobile": "8347892046",
+      "city": "dungari",
+      "gender": 1,
+      "department": 1,
+      "hireDate": null,
+      "isPermanent": false,
+      "id": 6
+    }
+  ]
+}

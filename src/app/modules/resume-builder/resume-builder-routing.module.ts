@@ -1,20 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ResumeFormComponent } from './components/resume-form/resume-form.component';
-import { ResumeViewComponent } from './components/resume-view/resume-view.component';
-
+import { ResumeViewComponent } from './resume-view/resume-view.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 const routes: Routes = [
-
-      { path: '' ,
-      children:[
-        { path:'' , redirectTo:'form', pathMatch:'full'},
-        
-        {path:'form' ,component: ResumeFormComponent},
-        {path:'view' ,component: ResumeViewComponent},
-
-      ] 
-    },
+  {path: '', component: UserFormComponent},
+  {path: 'view', component:ResumeViewComponent}
 ];
 
 @NgModule({
