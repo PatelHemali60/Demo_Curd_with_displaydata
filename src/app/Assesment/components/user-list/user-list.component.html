@@ -1,0 +1,31 @@
+<p>user-list works!</p>
+
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th> No </th>
+                <th> First Name </th>
+                <th> Last Name </th>
+                <th> Phone Number </th>
+                <th> Email </th>
+                <th> Client </th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <!-- <tr *ngFor="let list of listdata | searchText:search"> -->
+            <tr *ngFor="let list of listdata | userSearch:userSearch">
+                <td> {{list.firstName}} </td>
+                    <td> {{list.lastName}} </td>
+                    <td> {{list.phoneNumber}} </td>
+                    <td> {{list.Email}} </td>
+                    <td> {{list.departList | idFilter: departList}} </td>
+                    <td><i (click)="editData(list.id)" class='bx bxs-edit-alt'></i>
+                        <i (click)="deletedata(list.id)" class='bx bxs-trash'></i>
+                    </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

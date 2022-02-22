@@ -2,61 +2,55 @@
     <h2> Registration Form </h2>
     <div class="space">
         <label for="fname"> FirstName :- </label>
-        <p>
-            <input type="text" name="fname" id="fname" formControlName="firstName">
-            <span *ngIf="firstName && firstName.invalid && firstName.touched"> This Field is Invalid.</span>
-        </p>
+        <input type="text" name="fname" id="fname" formControlName="firstName">
+        <span *ngIf="firstName && firstName.invalid && firstName.touched">  Field is required.</span>
+
     </div>
-    
+
     <div class="space">
-        <label for="lname"> Last Name :- </label>
+        <label for="lname"> Last Name </label>
+        <input type="text" name="lname" id="lname" formControlName="lastName">
+        <span *ngIf="lastName && lastName.invalid && lastName.touched"> Field is required</span>
 
-
-
-        <p>
-            <input type="text" name="lname" id="lname" formControlName="lastName">
-            <span *ngIf="lastName && lastName.invalid && lastName.touched"> This Field is Invalid.</span>
-        </p>
     </div>
-    
+
     <div class="space">
-        <label for="phone"> Phone Number :- </label>
-        <p>
-            <input type="number" name="phone" id="phone" formControlName="phoneNumber">
-            <span *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"> This Field is Invalid.</span>
-        </p>
+        <label for="phone"> Phone Number </label>
+        <input type="number" name="phone" id="phone" formControlName="phoneNumber">
+        <span *ngIf="phoneNumber && phoneNumber.invalid && phoneNumber.touched"> Field is required</span>
+
     </div>
-    
+
     <div class="space">
         <label for="mail"> Email :- </label>
-        <p>
-            <input type="text" name="mail" id="mail" formControlName="Email">
-            <span *ngIf="Email && Email.invalid && Email.touched"> This Field is Invalid.</span>
-        </p>
+
+        <input type="text" name="mail" id="mail" formControlName="Email">
+        <span *ngIf="Email && Email.invalid && Email.touched">  Field is required.</span>
+
     </div>
-        
+
     <div class="space">
         <label for="age"> Age :- </label>
-        <p>
-            <input type="text" name="Age" id="age" formControlName="Age">
-            <span *ngIf="Age && Age.invalid && Age.touched"> This Field is Invalid.</span>
-        </p>
+
+        <input type="text" name="Age" id="age" formControlName="Age">
+        <span *ngIf="Age && Age.invalid && Age.touched">  Field is required</span>
+
     </div>
-    
+
     <div class="space">
         <label for="gender"> Gender:- </label>
         <div>
-            <input type="radio"  id="male" value="Male" formControlName="gender">
+            <input type="radio" id="male" value="Male" formControlName="gender">
             <label for="male"> Male </label>
-            <input type="radio"  id="female" value="Female" formControlName="gender">
+            <input type="radio" id="female" value="Female" formControlName="gender">
             <label for="female"> Female </label>
-            <span *ngIf="gender && gender.invalid && gender.touched"> This Field is Invalid.</span>
+            <span *ngIf="gender && gender.invalid && gender.touched">  Field is required.</span>
         </div>
     </div>
     <div class="space">
         <label for="dob"> Date of Birth :- </label>
         <input type="date" name="dob" id="dob" formControlName="dob">
-        <span *ngIf="dob && dob.invalid && dob.touched"> This Field is Invalid.</span>
+        <span *ngIf="dob && dob.invalid && dob.touched">  Field is required</span>
     </div>
 
     <div class="space">
@@ -67,11 +61,11 @@
                     {{ d.name }}
                 </option>
             </select>
-            <span *ngIf="departList && departList.invalid && departList.touched"> This Field is Invalid.</span>
+            <span *ngIf="departList && departList.invalid && departList.touched">  Field is required</span>
         </div>
     </div>
     <div class="space">
         <button (click)="onsubmit()" [disabled]="!useradd.valid"> Submit </button>
     </div>
-    
+
 </form>

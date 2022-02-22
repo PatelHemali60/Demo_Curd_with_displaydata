@@ -6,7 +6,7 @@ const routes: Routes = [
     path:'', redirectTo:'data-binding', pathMatch:'full'
   },
   {
-    path: "data-binding",
+    path: 'data-binding',
     loadChildren: () =>
       import('./modules/data-binding/data-binding.module').then((m) => m.DataBindingModule)
   },
@@ -25,7 +25,9 @@ const routes: Routes = [
         (m) => m.ResumeBuilderModule
       ),
   },
-  { path: 'employees', loadChildren: () => import('./Assesments/employees/employees.module').then(m => m.EmployeesModule) }
+  
+  { path: 'userview', loadChildren: () => import('./Assesment/user-view/user-view.module').then(m => m.UserViewModule) },
+ 
 ];
 
 @NgModule({

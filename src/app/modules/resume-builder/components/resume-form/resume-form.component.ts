@@ -15,8 +15,7 @@ export class ResumeFormComponent implements OnInit {
 
   resumeForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: ResumeService, private route: Router
-  ) {
+  constructor(private fb: FormBuilder, private service: ResumeService, private route: Router) {
     this.resumeForm = this.buildForm()
   }
 

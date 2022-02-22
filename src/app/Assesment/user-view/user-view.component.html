@@ -1,0 +1,40 @@
+<!-- <p>user-view works!</p> -->
+
+<div class="Wrapper-user">
+
+    <div class="div-top">
+        <p> User </p>
+        <div class="list">
+
+            <label for="department">client:</label>
+            <div [formGroup]="List1">
+
+                <select id="department" name="department" formControlName="Flist">
+                    <option *ngFor="let d of departList" [value]="d.id">
+                        {{ d.name }}
+                    </option>
+                </select>
+
+            </div>
+
+            <input type="text" id="myInput" placeholder="Search..." class="margin" [(ngModel)]="userSearch">
+
+
+            <!-- add form on button click-->
+            <button class="btn btn-primary margin" (click)="showForm()">+Add user</button>
+        </div>
+        <!--end of the list-->
+        <div>
+
+            <!--end of the Alignitem-->
+
+            <!--display form-->
+            <div class="form-wrapper">
+                <app-user-form> </app-user-form>
+            </div>
+
+            <!--display List-->
+            <div class="List-wrapper">
+                <app-user-list> </app-user-list>
+            </div>
+</div>

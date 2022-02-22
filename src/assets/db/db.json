@@ -155,5 +155,31 @@
       "isPermanent": false,
       "id": 6
     }
+  ],
+  "User": [
+    {
+      "id": 1,
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": 67562342323,
+      "Email": "hemali90@gmail.com",
+      "departList": "3"
+    },
+    {
+      "firstName": "hemali",
+      "lastName": "patel",
+      "phoneNumber": "325475858",
+      "Email": "hemali90@gmail.com",
+      "departList": "2",
+      "id": 2
+    },
+    {
+      "firstName": "piku",
+      "lastName": "patel",
+      "phoneNumber": "3446454664",
+      "Email": "pikupatel15@gmail.com",
+      "departList": "2",
+      "id": 3
+    }
   ]
 }

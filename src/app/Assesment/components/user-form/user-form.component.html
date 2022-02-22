@@ -1,0 +1,59 @@
+<p>user-form works!</p>
+<div *ngIf="showMe" class="div-form">
+
+    <!-- <label for=""> form works!!! </label> -->
+
+    <!-- form starts here-->
+    <form [formGroup]="useradd">
+        <h2> Registration Form </h2>
+
+        <div class="space">
+            <label for="fname"> FirstName </label>
+
+            <input type="text" formControlName="firstName" name="fname" id="fname">
+            <span *ngIf="!user['firstName']?.valid && user['firstName']?.touched"> *</span>
+
+        </div>
+
+        <div class="space">
+            <label for="lname"> Last Name </label>
+
+            <input type="text" name="lname" id="lname" formControlName="lastName">
+            <span *ngIf="!user['lastName']?.valid && user['lastName']?.touched"> *</span>
+
+        </div>
+
+        <div class="space">
+            <label for="mail"> Email </label>
+
+            <input type="text" name="mail" id="mail" formControlName="Email">
+            <span *ngIf="!user['Email']?.valid && user['Email']?.touched"> * </span>
+
+        </div>
+
+        <div class="space">
+            <label for="phone"> Phone Number </label>
+
+            <input type="tel" name="phone" id="phone" formControlName="phoneNumber">
+            <span *ngIf="!user['phoneNumber']?.valid && user['phoneNumber']?.touched">** </span>
+
+        </div>
+
+        <div class="space">
+            <!-- department data-->
+            <label for="department"> client:</label>
+            <div>
+                <select id="department" name="department" formControlName="departList">
+                    <option *ngFor="let d of departList" [value]="d.id">
+                        {{ d.name }}
+                    </option>
+                </select>
+                <span *ngIf="!user['departList']?.valid && user['departList']?.touched"> *</span>
+            </div>
+        </div>
+        <div class="space">
+            <button (click)="onsubmit()" [disabled]="!useradd.valid"> Submit </button>
+        </div>
+
+    </form>
+</div>

@@ -13,7 +13,7 @@ export class ResumeService {
   apiLink : string;
 
   constructor(private http: HttpClient) { 
-    this.apiLink =  environment.baseUrl; //form enviorment api path store 
+    this.apiLink =  environment.baseURL; //form enviorment api path store 
   }
 
   //save data in form

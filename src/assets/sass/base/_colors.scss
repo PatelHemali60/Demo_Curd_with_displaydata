@@ -1,0 +1,47 @@
+// Theme Primary Color
+// $primary: #04471c;
+
+// // Mainly use for UI controls like Buttons
+// $secondary: #fbde4a;
+
+// // Used for Footer Section
+// $accent: #021a28;
+
+
+
+// // Additional Shades of gray color
+// $light: #f8fafc;
+// $extra-light: #fcfcfc;
+
+// // Dedicated for button text only
+// $btn-text-primary: $primary;
+
+// $theme-colors: (
+//   "primary": $primary,
+//   "secondary": $secondary,
+//   "gray": $gray,
+//   "light": $light,
+//   "accent": $accent
+// );
+$black: #000000;
+$dark: #343a40;
+$white: #ffffff;
+$outline: #f0f0f0;
+$primary: #61a4f0;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+//Mainly use for Normal Text color
+$gray: #989d9e;
+
+$colors-map:(
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "gray": $gray,
+);
